@@ -27,9 +27,9 @@ class VillageProfileController extends Controller
     public function update(Request $request, VillageProfile $profile)
     {
         $validated = $request->validate([
-            'history' => 'required|string',
-            'vision' => 'required|string',
-            'mission' => 'required|string',
+            'history' => 'nullable|string',
+            'vision' => 'nullable|string',
+            'mission' => 'nullable|string',
             'location_map' => 'nullable|string',
             'structure_image' => 'nullable|image|max:2048',
         ]);

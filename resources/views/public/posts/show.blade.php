@@ -44,9 +44,9 @@
             <div class="mt-16 pt-8 border-t flex items-center justify-between flex-wrap gap-4">
                 <div class="font-bold text-village-primary uppercase tracking-widest text-sm">Bagikan ke media sosial:</div>
                 <div class="flex gap-3">
-                    <div class="px-4 py-2 bg-blue-600 text-white text-xs font-bold rounded cursor-pointer">Facebook</div>
-                    <a href="https://wa.me/6285227161222?text={{ urlencode('Halo, saya ingin menanyakan tentang: ' . $post->title) }}" class="px-4 py-2 bg-green-500 text-white text-xs font-bold rounded cursor-pointer">WhatsApp</a>
-                    <div class="px-4 py-2 bg-black text-white text-xs font-bold rounded cursor-pointer">X / Twitter</div>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank" class="px-4 py-2 bg-[#1877F2] text-white text-xs font-bold rounded-lg hover:opacity-80 transition cursor-pointer">Facebook</a>
+                    <a href="https://wa.me/?text={{ urlencode($post->title . ' - ' . url()->current()) }}" target="_blank" class="px-4 py-2 bg-[#25D366] text-white text-xs font-bold rounded-lg hover:opacity-80 transition cursor-pointer">WhatsApp</a>
+                    <a href="https://twitter.com/intent/tweet?text={{ urlencode($post->title) }}&url={{ urlencode(url()->current()) }}" target="_blank" class="px-4 py-2 bg-black text-white text-xs font-bold rounded-lg hover:opacity-80 transition cursor-pointer">X / Twitter</a>
                 </div>
             </div>
         </div>

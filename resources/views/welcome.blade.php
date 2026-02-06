@@ -2,18 +2,18 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative bg-village-primary text-white py-32 overflow-hidden">
-    <!-- Decorative background -->
-    <div class="absolute inset-0 opacity-10">
-        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path d="M0 100 C 20 0 50 0 100 100 Z" fill="currentColor"></path>
-        </svg>
+<section class="relative min-h-[80vh] flex items-center text-white overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <img src="{{ asset('assets/hero-bg.jpg') }}" alt="Background Desa Kumejing" class="w-full h-full object-cover">
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-village-primary/70 backdrop-blur-[2px]"></div>
     </div>
     
-    <div class="container mx-auto px-4 relative z-10 text-center">
+    <div class="container mx-auto px-4 relative z-10 text-center py-32">
         <h2 class="text-village-accent font-bold tracking-widest mb-4">Selamat Datang di</h2>
         <h1 class="text-5xl md:text-7xl font-bold mb-8">Website Resmi<br>Desa Kumejing</h1>
-        <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12">
+        <p class="text-xl md:text-2xl text-WHITE-300 max-w-3xl mx-auto mb-12">
             Sarana transparansi dan informasi publik untuk mewujudkan Desa Kumejing yang lebih maju, mandiri, dan sejahtera.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
@@ -59,7 +59,12 @@
                 <div class="absolute top-4 left-4 bg-village-accent text-village-primary text-xs font-bold px-3 py-1 rounded-full uppercase">Berita</div>
             </div>
             <div class="p-6">
-                <div class="text-gray-400 text-xs mb-3">{{ $post->created_at->format('d F Y') }}</div>
+                <div class="flex items-center gap-2 text-gray-400 text-xs mb-3">
+                    <svg class="w-3.5 h-3.5 text-village-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>{{ $post->created_at->format('d F Y') }}</span>
+                </div>
                 <h3 class="text-xl font-bold text-village-primary mb-4 line-clamp-2 hover:text-village-secondary transition">
                     <a href="{{ route('public.posts.detail', $post->slug) }}">{{ $post->title }}</a>
                 </h3>

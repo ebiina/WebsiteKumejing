@@ -2,8 +2,14 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-village-primary py-24 text-white">
-    <div class="container mx-auto px-4 text-center">
+<section class="relative py-24 text-white bg-village-primary overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <img src="{{ asset('assets/header-bg.jpg') }}" class="w-full h-full object-cover opacity-20" alt="Header Background">
+        <div class="absolute inset-0 bg-gradient-to-b from-village-primary/80 to-village-primary"></div>
+    </div>
+
+    <div class="container mx-auto px-4 text-center relative z-10">
         <h1 class="text-5xl font-bold mb-4">{{ $type == 'news' ? 'Berita Desa' : 'Agenda Kegiatan' }}</h1>
         <div class="flex justify-center items-center gap-2 text-village-light">
             <a href="{{ route('home') }}" class="hover:text-village-accent">Beranda</a>
@@ -31,13 +37,29 @@
                 </div>
             </div>
             <div class="p-6 flex flex-col flex-1">
-                <div class="text-gray-400 text-xs mb-3">
+            <div class="flex items-center gap-2 text-gray-400 text-xs leading-none mb-3">
+                <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-village-accent shrink-0"
+                >
+                    <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+
+                <span>
                     @if($post->type == 'agenda' && $post->event_date)
-                        📅 {{ $post->event_date->format('d M Y, H:i') }} WIB
+                        {{ $post->event_date->format('d M Y, H:i') }} WIB
                     @else
-                        📅 {{ $post->created_at->format('d F Y') }}
+                        {{ $post->created_at->format('d F Y') }}
                     @endif
-                </div>
+                </span>
+            </div>
                 <h3 class="text-xl font-bold text-village-primary mb-4 line-clamp-2 hover:text-village-secondary transition">
                     <a href="{{ route('public.posts.detail', $post->slug) }}">{{ $post->title }}</a>
                 </h3>

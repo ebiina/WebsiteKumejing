@@ -2,8 +2,14 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-village-primary py-24 text-white">
-    <div class="container mx-auto px-4 text-center">
+<section class="relative py-24 text-white bg-village-primary overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <img src="{{ asset('assets/header-bg.jpg') }}" class="w-full h-full object-cover opacity-20" alt="Header Background">
+        <div class="absolute inset-0 bg-gradient-to-b from-village-primary/80 to-village-primary"></div>
+    </div>
+
+    <div class="container mx-auto px-4 text-center relative z-10">
         <h1 class="text-5xl font-bold mb-4">Data Kependudukan</h1>
         <div class="flex justify-center items-center gap-2 text-village-light">
             <a href="{{ route('home') }}" class="hover:text-village-accent">Beranda</a>
@@ -18,13 +24,13 @@
         <!-- Main Stats Summary -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             @foreach($generalData as $stat)
-            <div class="bg-white p-8 rounded-3xl shadow-sm border-b-8 border-village-primary hover:transform hover:-translate-y-2 transition duration-300">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 border-b-8 border-b-village-primary hover:transform hover:-translate-y-2 transition duration-300">
                 <div class="text-gray-500 text-xs font-bold uppercase tracking-widest mb-2">{{ $stat->label }}</div>
                 <div class="text-4xl font-black text-village-primary">{{ number_format($stat->count) }}</div>
             </div>
             @endforeach
             @foreach($familyData as $stat)
-            <div class="bg-white p-8 rounded-3xl shadow-sm border-b-8 border-village-accent hover:transform hover:-translate-y-2 transition duration-300">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 border-b-8 border-b-village-accent hover:transform hover:-translate-y-2 transition duration-300">
                 <div class="text-gray-500 text-xs font-bold uppercase tracking-widest mb-2">{{ $stat->label }}</div>
                 <div class="text-4xl font-black text-village-accent">{{ number_format($stat->count) }}</div>
             </div>
@@ -34,11 +40,11 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <!-- Gender Chart -->
             <div class="bg-white p-10 rounded-3xl shadow-sm border border-village-light">
-                <h2 class="text-2xl font-bold text-village-primary mb-8 border-l-4 border-village-accent pl-4 uppercase">Distribusi Jenis Kelamin</h2>
+                <h2 class="text-2xl font-bold text-village-primary mb-8 border-l-4 border-village-accent pl-6 uppercase" style="padding-left: 1.5rem;">Distribusi Jenis Kelamin</h2>
                 <div class="h-80">
                     <canvas id="genderChart"></canvas>
                 </div>
-                <div class="mt-8 grid grid-cols-2 gap-4">
+                <div class="mt-8 flex flex-col gap-3">
                     @foreach($genderData as $stat)
                     <div class="flex items-center gap-3">
                         <div class="w-4 h-4 rounded-full {{ $stat->label == 'Laki-laki' ? 'bg-blue-500' : 'bg-pink-500' }}"></div>
@@ -50,7 +56,7 @@
 
             <!-- Age Groups Chart -->
             <div class="bg-white p-10 rounded-3xl shadow-sm border border-village-light">
-                <h2 class="text-2xl font-bold text-village-primary mb-8 border-l-4 border-village-accent pl-4 uppercase">Kelompok Umur</h2>
+                <h2 class="text-2xl font-bold text-village-primary mb-8 border-l-4 border-village-accent pl-6 uppercase" style="padding-left: 1.5rem;">Kelompok Umur</h2>
                 <div class="h-80">
                     <canvas id="ageChart"></canvas>
                 </div>
@@ -65,20 +71,10 @@
                 <p class="text-gray-500 mt-4">Klik pada bagian grafik untuk melihat detail distribusi kepala keluarga.</p>
             </div>
             
-            <div class="bg-white p-10 rounded-3xl shadow-sm border border-village-light">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-village-light mt-10">
                 <div id="sunburstChart" style="width: 100%; height: 500px;"></div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Stats Information Info -->
-<section class="py-16 container mx-auto px-4 text-center">
-    <div class="max-w-3xl mx-auto border-t pt-8">
-        <p class="text-gray-500 text-sm">
-            * Data statistik kependudukan ini diperbarui secara berkala oleh Pemerintah Desa Kumejing melalui sistem administrasi desa. 
-            Informasi di atas merupakan agregat data penduduk yang valid dan dapat dipertanggungjawabkan.
-        </p>
     </div>
 </section>
 

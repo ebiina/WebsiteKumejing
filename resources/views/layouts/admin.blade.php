@@ -30,7 +30,7 @@
                     Dashboard
                 </a>
                 <a href="{{ route('admin.profile.index') }}" class="block py-3 px-6 hover:bg-village-secondary {{ request()->routeIs('admin.profile.*') ? 'bg-village-secondary' : '' }}">
-                    Profil Desa
+                    Struktur Desa
                 </a>
                 <a href="{{ route('admin.posts.index', ['type' => 'news']) }}" class="block py-3 px-6 hover:bg-village-secondary {{ request()->routeIs('admin.posts.*') && request('type') == 'news' ? 'bg-village-secondary' : '' }}">
                     Berita
