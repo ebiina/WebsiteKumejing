@@ -5,8 +5,8 @@
     <section class="relative py-24 text-white bg-village-primary overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('assets/header-bg.jpg') }}" class="w-full h-full object-cover opacity-20" alt="Header Background">
-            <div class="absolute inset-0 bg-gradient-to-b from-village-primary/80 to-village-primary"></div>
+            <img src="{{ asset('assets/header-bg.jpg') }}" class="w-full h-full object-cover" alt="Header Background">
+            <div class="absolute inset-0 bg-village-primary/60"></div>
         </div>
 
         <div class="container mx-auto px-4 text-center relative z-10">
@@ -22,13 +22,13 @@
 <div class="profil-desa-container">
 
     {{-- Visi Misi Section --}}
-    <section class="visi-misi-section">
+    <section class="visi-misi-section reveal">
         <div class="visi-card">
             <div class="card-icon">
                 <i class="icon-target"></i>
             </div>
             <h2 class="section-title">Visi Desa Kumejing</h2>
-            <p class="visi-text">"Mewujudkan Desa Kumejing yang Mandiri, Sejahtera, dan Berakhlak Mulia"</p>
+            <p class="visi-text">"Sesarengan Membangun Kumejing Harapan Baru Kumejing Hebat"</p>
         </div>
 
         <div class="misi-card">
@@ -37,16 +37,23 @@
             </div>
             <h2 class="section-title">Misi Desa Kumejing</h2>
             <ol class="misi-list">
-                <li>Meningkatkan pelayanan publik yang transparan dan akuntabel</li>
-                <li>Memberdayakan ekonomi kerakyatan melalui potensi lokal</li>
-                <li>Pembangunan infrastruktur yang merata di seluruh dusun</li>
-                <li>Melestarikan nilai-nilai budaya dan kearifan lokal</li>
+                <li>Mewujudkan pemerintahan desa yang religius.</li>
+                <li>Mewujudkan pemerintahan desa yang melayani seluruh masyarakat di empat dusun dengan pelayanan yang mudah, ramah, dan nyaman.</li>
+                <li>Mewujudkan pemerintahan desa yang bertanggung jawab, transparan, terbuka, dan bersih.</li>
+                <li>Melanjutkan pembangunan prasarana jalan poros desa, jalan antar dusun, jalan lingkungan, serta jalan usaha tani (JUT).</li>
+                <li>Membangun sarana dan prasarana perekonomian serta memperkuat kapasitas kepariwisataan dan pertanian masyarakat.</li>
+                <li>Menuntaskan pendidikan dasar 12 tahun bagi warga usia sekolah serta menyediakan sarana dan prasarana pendidikan anak usia dini dan pendidikan nonformal.</li>
+                <li>Memberikan pelayanan kesehatan kepada masyarakat dengan fasilitas kesehatan yang memadai serta pelayanan yang cepat, ramah, dan mudah.</li>
+                <li>Mengelola dan meningkatkan kapasitas sumber daya manusia serta kelembagaan desa.</li>
+                <li>Memanfaatkan potensi desa sebagai modal pemberdayaan dan peningkatan kesejahteraan masyarakat.</li>
+                <li>Meningkatkan kehidupan masyarakat yang rukun, aman, dan tertib dengan berpegang teguh pada prinsip-prinsip agama dan adat istiadat yang berlaku.</li>
+                <li>Membentuk komunitas relawan peduli lingkungan dan tanggap darurat bencana.</li>
             </ol>
         </div>
     </section>
 
     {{-- Sejarah Desa Section --}}
-    <section class="sejarah-section">
+    <section class="sejarah-section reveal">
         <div class="section-header">
             <h2 class="section-title">Sejarah Desa Kumejing</h2>
             <div class="title-underline"></div>

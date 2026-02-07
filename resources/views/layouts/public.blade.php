@@ -8,8 +8,9 @@
     <title>Situs Resmi Desa Kumejing</title>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('assets/LOGO KAB WONOSOBO.png') }}">
@@ -80,7 +81,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
+    <main class="animate-on-load">
         @yield('content')
     </main>
 
@@ -137,5 +138,26 @@
             <p>&copy; {{ date('Y') }} Pemerintah Desa Kumejing. Developed by KKN Universitas Jenderal Soedirman 2026. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+        // Scroll Reveal Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Animation runs only once
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>

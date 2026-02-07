@@ -7,7 +7,7 @@
     <div class="absolute inset-0 z-0">
         <img src="{{ asset('assets/hero-bg.jpg') }}" alt="Background Desa Kumejing" class="w-full h-full object-cover">
         <!-- Overlay for readability -->
-        <div class="absolute inset-0 bg-village-primary/70 backdrop-blur-[2px]"></div>
+        <div class="absolute inset-0 bg-village-primary/70"></div>
     </div>
     
     <div class="container mx-auto px-4 relative z-10 text-center py-32">
@@ -24,19 +24,19 @@
 </section>
 
 <!-- Stats Section -->
-<section class="py-12 bg-white shadow-inner -mt-10 mx-auto container px-4 rounded-xl relative z-20 max-w-6xl border">
+<section class="py-12 bg-white shadow-inner -mt-10 mx-auto container px-4 rounded-xl relative z-20 max-w-6xl border reveal">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x">
         @foreach($stats as $stat)
         <div class="p-4">
             <div class="text-gray-500 text-sm font-medium mb-2">{{ $stat->label }}</div>
-            <div class="text-4xl font-bold text-village-primary">{{ number_format($stat->count) }}</div>
+            <div class="text-4xl font-medium text-village-primary">{{ number_format($stat->count) }}</div>
         </div>
         @endforeach
     </div>
 </section>
 
 <!-- News & Agenda Section -->
-<section class="py-24 container mx-auto px-4">
+<section class="py-24 container mx-auto px-4 reveal">
     <div class="flex justify-between items-end mb-12">
         <div>
             <h2 class="text-4xl font-bold text-village-primary mb-2">Informasi Terkini</h2>
@@ -59,12 +59,23 @@
                 <div class="absolute top-4 left-4 bg-village-accent text-village-primary text-xs font-bold px-3 py-1 rounded-full uppercase">Berita</div>
             </div>
             <div class="p-6">
-                <div class="flex items-center gap-2 text-gray-400 text-xs mb-3">
-                    <svg class="w-3.5 h-3.5 text-village-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                    <span>{{ $post->created_at->format('d F Y') }}</span>
-                </div>
+            <div class="flex items-center gap-2 text-gray-400 text-xs leading-none mb-3">
+                <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-village-accent shrink-0"
+                >
+                    <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+
+                <span>{{ $post->created_at->format('d F Y') }}</span>
+            </div>
                 <h3 class="text-xl font-bold text-village-primary mb-4 line-clamp-2 hover:text-village-secondary transition">
                     <a href="{{ route('public.posts.detail', $post->slug) }}">{{ $post->title }}</a>
                 </h3>
@@ -81,7 +92,7 @@
 </section>
 
 <!-- Agenda Section -->
-<section class="py-24 bg-village-light/30">
+<section class="py-24 bg-village-light/30 reveal">
     <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row gap-16">
             <div class="md:w-1/3">

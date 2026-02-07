@@ -5,8 +5,8 @@
 <section class="relative py-24 text-white bg-village-primary overflow-hidden">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
-        <img src="{{ asset('assets/header-bg.jpg') }}" class="w-full h-full object-cover opacity-20" alt="Header Background">
-        <div class="absolute inset-0 bg-gradient-to-b from-village-primary/80 to-village-primary"></div>
+        <img src="{{ asset('assets/header-bg.jpg') }}" class="w-full h-full object-cover" alt="Header Background">
+        <div class="absolute inset-0 bg-village-primary/60"></div>
     </div>
 
     <div class="container mx-auto px-4 text-center relative z-10">
@@ -26,13 +26,13 @@
             @foreach($generalData as $stat)
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 border-b-8 border-b-village-primary hover:transform hover:-translate-y-2 transition duration-300">
                 <div class="text-gray-500 text-xs font-bold uppercase tracking-widest mb-2">{{ $stat->label }}</div>
-                <div class="text-4xl font-black text-village-primary">{{ number_format($stat->count) }}</div>
+                <div class="text-4xl font-medium text-village-primary">{{ number_format($stat->count) }}</div>
             </div>
             @endforeach
             @foreach($familyData as $stat)
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 border-b-8 border-b-village-accent hover:transform hover:-translate-y-2 transition duration-300">
                 <div class="text-gray-500 text-xs font-bold uppercase tracking-widest mb-2">{{ $stat->label }}</div>
-                <div class="text-4xl font-black text-village-accent">{{ number_format($stat->count) }}</div>
+                <div class="text-4xl font-medium text-village-accent">{{ number_format($stat->count) }}</div>
             </div>
             @endforeach
         </div>
@@ -158,7 +158,7 @@
         name: 'Total\nKepala Keluarga',
         value: {{ $totalKKCount }},
         itemStyle: { color: '#053F5C' },
-        label: { fontWeight: 'bold' },
+        label: { fontWeight: 'normal' },
         children: [
             {
                 name: 'Laki-laki',
@@ -198,7 +198,7 @@
                         rotate: 'tangential',
                         fontSize: 14,
                         color: '#fff',
-                        fontWeight: 'bold'
+                        fontWeight: 'normal'
                     }
                 },
                 {
@@ -207,7 +207,7 @@
                     label: {
                         fontSize: 13,
                         color: '#fff',
-                        fontWeight: 'bold',
+                        fontWeight: 'normal',
                         minAngle: 5
                     }
                 }

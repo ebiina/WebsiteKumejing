@@ -8,8 +8,9 @@
     <title>Admin - Situs Resmi Desa Kumejing</title>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('assets/LOGO KAB WONOSOBO.png') }}">
@@ -59,7 +60,7 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 p-10">
+        <main class="flex-1 p-10 animate-on-load">
             <header class="mb-8 border-b pb-4 flex justify-between items-center">
                 <h1 class="text-3xl font-bold text-village-primary">@yield('title', 'Dashboard')</h1>
                 <div class="text-gray-600">

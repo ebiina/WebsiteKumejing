@@ -1,15 +1,21 @@
 @extends('layouts.public')
 
 @section('content')
-<!-- Page Header (Short) -->
-<section class="bg-village-primary py-12 text-white">
-    <div class="container mx-auto px-4">
-        <div class="flex items-center gap-2 text-village-light text-sm mb-2">
+<!-- Page Header -->
+<section class="relative py-24 text-white bg-village-primary overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <img src="{{ asset('assets/header-bg.jpg') }}" class="w-full h-full object-cover" alt="Header Background">
+        <div class="absolute inset-0 bg-village-primary/60"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="flex items-center gap-2 text-village-light text-sm mb-4">
             <a href="{{ route('home') }}" class="hover:text-village-accent">Beranda</a>
             <span>/</span>
             <a href="{{ route('public.posts', ['type' => $post->type]) }}" class="hover:text-village-accent">{{ $post->type == 'news' ? 'Berita' : 'Agenda' }}</a>
         </div>
-        <h1 class="text-3xl md:text-4xl font-bold leading-tight uppercase">{{ $post->title }}</h1>
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight">{{ $post->title }}</h1>
     </div>
 </section>
 

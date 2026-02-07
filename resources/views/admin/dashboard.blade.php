@@ -295,7 +295,7 @@
 
 .welcome-title {
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 700;
     color: white;
     margin-bottom: 0.5rem;
     letter-spacing: -0.02em;
@@ -440,7 +440,7 @@
 
 .stat-value {
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 700;
     color: var(--primary-blue);
     line-height: 1;
     margin-bottom: 0.75rem;
@@ -495,7 +495,7 @@
 
 .section-title {
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--primary-blue);
     margin-bottom: 0.25rem;
     letter-spacing: -0.02em;
@@ -593,7 +593,7 @@
 
 .population-count {
     font-size: 1.75rem;
-    font-weight: 900;
+    font-weight: 700;
     color: var(--primary-blue);
     margin-bottom: 0.75rem;
 }

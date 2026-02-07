@@ -17,11 +17,12 @@ class DatabaseSeeder extends Seeder
     {
         // Admin User
         User::updateOrCreate(
-            ['email' => 'admin@kumejing.desa.id'],
+            ['email' => 'kumejingdesa25@gmail.com'],
             [
                 'name' => 'Admin Kumejing',
-                'password' => bcrypt('password'), // Change code later!
+                'password' => bcrypt('password'),
                 'role' => 'admin',
+                'email_verified_at' => now(),
             ]
         );
 

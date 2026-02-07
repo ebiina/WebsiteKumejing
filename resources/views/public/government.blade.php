@@ -5,8 +5,8 @@
 <section class="relative py-24 text-white bg-village-primary overflow-hidden">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
-        <img src="{{ asset('assets/header-bg.jpg') }}" class="w-full h-full object-cover opacity-20" alt="Header Background">
-        <div class="absolute inset-0 bg-gradient-to-b from-village-primary/80 to-village-primary"></div>
+        <img src="{{ asset('assets/header-bg.jpg') }}" class="w-full h-full object-cover" alt="Header Background">
+        <div class="absolute inset-0 bg-village-primary/60"></div>
     </div>
 
     <div class="container mx-auto px-4 text-center relative z-10">
@@ -20,7 +20,7 @@
 </section>
 
 <!-- Officials Section -->
-<section class="py-20 bg-white">
+<section class="py-20 bg-white reveal">
     <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
 
@@ -164,34 +164,31 @@
 
             </div>
 
-            <!-- Call to Action -->
-            <div class="mt-32 pt-8">
-                <div class="bg-gradient-to-r from-village-primary to-village-secondary rounded-[2.5rem] p-12 text-center text-white shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
-                    <div class="absolute bottom-0 left-0 w-48 h-48 bg-village-accent/5 rounded-full translate-y-24 -translate-x-24"></div>
+<!-- Call to Action -->
+<div class="mt-32 pt-8">
+    <div class="bg-gradient-to-r from-village-primary to-village-secondary rounded-[2.5rem] p-12 text-center text-white shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-village-accent/5 rounded-full translate-y-24 -translate-x-24"></div>
 
-                    <h3 class="text-3xl font-bold mb-6 relative z-10 text-village-accent">
-                        Butuh Bantuan Kami?
-                    </h3>
+        <h3 class="text-3xl text-white font-bold mb-6 relative z-10 text-village-accent">
+            Butuh Bantuan Kami?
+        </h3>
 
-                    <p class="text-village-primary mb-10 max-w-2xl mx-auto relative z-10 text-lg">
-                        Tim perangkat desa siap memberikan pelayanan terbaik dengan integritas dan profesionalisme. Hubungi kami untuk segala keperluan administrasi Anda.
-                    </p>
+        <p class="text-white mb-10 max-w-2xl mx-auto relative z-10 text-lg">
+            Tim perangkat desa siap memberikan pelayanan terbaik dengan integritas dan profesionalisme. Hubungi kami untuk segala keperluan administrasi Anda.
+        </p>
 
-                    <div class="flex flex-wrap gap-4 justify-center relative z-10 mt-6">
-                        <a href="{{ route('public.contact') }}" class="inline-flex items-center gap-3 bg-village-accent text-village-primary font-bold px-10 py-4 rounded-full hover:shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                            Hubungi Kami
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+        <div class="flex flex-wrap gap-4 justify-center relative z-10 mt-6">
+            <a href="{{ route('public.contact') }}" class="inline-flex items-center gap-3 bg-village-accent text-village-primary font-bold px-10 py-4 rounded-full hover:shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                Hubungi Kami
+            </a>
         </div>
     </div>
-</section>
+</div>
+```
 
 <!-- Structure Section -->
 @if($profile && $profile->structure_image)
