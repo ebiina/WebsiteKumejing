@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // Admin User
         User::updateOrCreate(
-            ['email' => 'kumejingdesa25@gmail.com'],
+            ['email' => 'kumejing2026@gmail.com'],
             [
                 'name' => 'Admin Kumejing',
                 'password' => bcrypt('password'),
