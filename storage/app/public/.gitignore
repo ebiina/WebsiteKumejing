@@ -1,2 +1,6 @@
 *
 !.gitignore
+!officials/
+!posts/
+!profile/
+!galleries/

@@ -26,7 +26,7 @@
         <article class="bg-white rounded-2xl shadow-sm overflow-hidden group hover:shadow-xl transition duration-300 border flex flex-col">
             <div class="relative h-56 overflow-hidden">
                 @if($post->image)
-                <img src="{{ asset('assets/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 @else
                 <div class="w-full h-full bg-village-light flex items-center justify-center p-12">
                     <img src="{{ asset('assets/LOGO KAB WONOSOBO.png') }}" alt="Kumejing" class="max-h-full opacity-20 grayscale">
