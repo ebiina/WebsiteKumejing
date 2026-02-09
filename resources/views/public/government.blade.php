@@ -89,7 +89,7 @@
                         <div class="w-64 bg-white rounded-3xl p-6 border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 text-center group border-t-4 border-t-village-secondary/20 hover:border-t-village-accent">
                             <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-gray-100 group-hover:ring-village-accent group-hover:scale-105 transition-all duration-300">
                                 @if($official->photo)
-                                    <img src="{{ Storage::disk('public')->exists($official->photo) ? asset('storage/' . $official->photo) : asset('assets/' . $official->photo) }}" class="w-full h-full object-cover">
+                                    <img src="{{ $official->photo_url }}" class="w-full h-full object-cover">
                                 @else
                                     <div class="w-full h-full bg-village-light flex items-center justify-center p-6">
                                         <img src="{{ asset('assets/LOGO KAB WONOSOBO.png') }}" class="max-h-full opacity-10">
@@ -118,7 +118,7 @@
                         <div class="w-64 bg-white rounded-3xl p-6 border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 text-center group border-t-4 border-t-village-secondary/20 hover:border-t-village-accent">
                             <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-gray-100 group-hover:ring-village-accent group-hover:scale-105 transition-all duration-300">
                                 @if($official->photo)
-                                    <img src="{{ Storage::disk('public')->exists($official->photo) ? asset('storage/' . $official->photo) : asset('assets/' . $official->photo) }}" class="w-full h-full object-cover">
+                                    <img src="{{ $official->photo_url }}" class="w-full h-full object-cover">
                                 @else
                                     <div class="w-full h-full bg-village-light flex items-center justify-center p-6">
                                         <img src="{{ asset('assets/LOGO KAB WONOSOBO.png') }}" class="max-h-full opacity-10">
@@ -147,7 +147,7 @@
                         <div class="w-64 bg-white rounded-3xl p-6 border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 text-center group border-t-4 border-t-village-secondary/20 hover:border-t-village-accent">
                             <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-gray-100 group-hover:ring-village-accent group-hover:scale-105 transition-all duration-300">
                                 @if($official->photo)
-                                    <img src="{{ Storage::disk('public')->exists($official->photo) ? asset('storage/' . $official->photo) : asset('assets/' . $official->photo) }}" class="w-full h-full object-cover">
+                                    <img src="{{ $official->photo_url }}" class="w-full h-full object-cover">
                                 @else
                                     <div class="w-full h-full bg-village-light flex items-center justify-center p-6">
                                         <img src="{{ asset('assets/LOGO KAB WONOSOBO.png') }}" class="max-h-full opacity-10">
