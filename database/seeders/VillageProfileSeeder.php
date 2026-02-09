@@ -63,7 +63,8 @@ TEXT;
 2. Memberdayakan ekonomi kerakyatan melalui potensi lokal.
 3. Pembangunan infrastruktur yang merata di seluruh dusun.
 4. Melestarikan nilai-nilai budaya dan kearifan lokal.
-TEXT
+TEXT,
+                'structure_image' => 'profile/sKB1hSnpdzRvUTwhX2r2qayGnMQLa8n2XLXCt9NT.jpg',
             ]
         );
     }
