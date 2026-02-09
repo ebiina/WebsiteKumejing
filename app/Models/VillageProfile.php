@@ -13,4 +13,12 @@ class VillageProfile extends Model
         'structure_image',
         'location_map',
     ];
+
+    public function getStructureImageUrlAttribute()
+    {
+        if ($this->structure_image && \Illuminate\Support\Facades\Storage::disk('public')->exists($this->structure_image)) {
+            return asset('storage/' . $this->structure_image);
+        }
+        return asset('assets/' . $this->structure_image);
+    }
 }

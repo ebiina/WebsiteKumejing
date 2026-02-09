@@ -12,4 +12,12 @@ class VillageOfficial extends Model
         'photo',
         'order',
     ];
+
+    public function getPhotoUrlAttribute()
+    {
+        if ($this->photo && \Illuminate\Support\Facades\Storage::disk('public')->exists($this->photo)) {
+            return asset('storage/' . $this->photo);
+        }
+        return asset('assets/' . $this->photo);
+    }
 }

@@ -58,7 +58,7 @@
                         <div class="flex flex-col items-center">
                             <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl mb-6 flex items-center justify-center bg-gray-50 ring-4 ring-village-primary/5 group-hover:ring-village-accent/30 transition-all duration-500">
                                 @if($kepalaDesa->photo)
-                                    <img src="{{ Storage::disk('public')->exists($kepalaDesa->photo) ? asset('storage/' . $kepalaDesa->photo) : asset('assets/' . $kepalaDesa->photo) }}" alt="{{ $kepalaDesa->name }}" class="w-full h-full object-cover">
+                                    <img src="{{ $kepalaDesa->photo_url }}" alt="{{ $kepalaDesa->name }}" class="w-full h-full object-cover">
                                 @else
                                     <div class="w-full h-full bg-village-light flex items-center justify-center p-12">
                                         <img src="{{ asset('assets/LOGO KAB WONOSOBO.png') }}" class="max-h-full opacity-20 grayscale">
@@ -197,7 +197,7 @@
             <div class="h-1.5 w-32 bg-village-accent rounded-full mx-auto"></div>
         </div>
         <div class="bg-white p-8 rounded-3xl shadow-sm max-w-5xl mx-auto border text-center">
-            <img src="{{ Storage::disk('public')->exists($profile->structure_image) ? asset('storage/' . $profile->structure_image) : asset('assets/' . $profile->structure_image) }}" alt="Struktur Organisasi" class="mx-auto block">
+            <img src="{{ $profile->structure_image_url }}" alt="Struktur Organisasi" class="mx-auto block">
         </div>
     </div>
 </section>
