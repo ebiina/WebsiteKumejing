@@ -58,7 +58,7 @@
                         <div class="flex flex-col items-center">
                             <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl mb-6 flex items-center justify-center bg-gray-50 ring-4 ring-village-primary/5 group-hover:ring-village-accent/30 transition-all duration-500">
                                 @if($kepalaDesa->photo)
-                                    <img src="{{ asset('storage/' . $kepalaDesa->photo) }}" alt="{{ $kepalaDesa->name }}" class="w-full h-full object-cover">
+                                    <img src="{{ asset('assets/' . $kepalaDesa->photo) }}" alt="{{ $kepalaDesa->name }}" class="w-full h-full object-cover">
                                 @else
                                     <div class="w-full h-full bg-village-light flex items-center justify-center p-12">
                                         <img src="{{ asset('assets/LOGO KAB WONOSOBO.png') }}" class="max-h-full opacity-20 grayscale">
@@ -89,7 +89,7 @@
                         <div class="w-64 bg-white rounded-3xl p-6 border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 text-center group border-t-4 border-t-village-secondary/20 hover:border-t-village-accent">
                             <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-gray-100 group-hover:ring-village-accent group-hover:scale-105 transition-all duration-300">
                                 @if($official->photo)
-                                    <img src="{{ asset('storage/' . $official->photo) }}" class="w-full h-full object-cover">
+                                    <img src="{{ asset('assets/' . $official->photo) }}" class="w-full h-full object-cover">
                                 @else
                                     <div class="w-full h-full bg-village-light flex items-center justify-center p-6">
                                         <img src="{{ asset('assets/LOGO KAB WONOSOBO.png') }}" class="max-h-full opacity-10">
@@ -118,7 +118,7 @@
                         <div class="w-64 bg-white rounded-3xl p-6 border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 text-center group border-t-4 border-t-village-secondary/20 hover:border-t-village-accent">
                             <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-gray-100 group-hover:ring-village-accent group-hover:scale-105 transition-all duration-300">
                                 @if($official->photo)
-                                    <img src="{{ asset('storage/' . $official->photo) }}" class="w-full h-full object-cover">
+                                    <img src="{{ asset('assets/' . $official->photo) }}" class="w-full h-full object-cover">
                                 @else
                                     <div class="w-full h-full bg-village-light flex items-center justify-center p-6">
                                         <img src="{{ asset('assets/LOGO KAB WONOSOBO.png') }}" class="max-h-full opacity-10">
@@ -147,7 +147,7 @@
                         <div class="w-64 bg-white rounded-3xl p-6 border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 text-center group border-t-4 border-t-village-secondary/20 hover:border-t-village-accent">
                             <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-gray-100 group-hover:ring-village-accent group-hover:scale-105 transition-all duration-300">
                                 @if($official->photo)
-                                    <img src="{{ asset('storage/' . $official->photo) }}" class="w-full h-full object-cover">
+                                    <img src="{{ asset('assets/' . $official->photo) }}" class="w-full h-full object-cover">
                                 @else
                                     <div class="w-full h-full bg-village-light flex items-center justify-center p-6">
                                         <img src="{{ asset('assets/LOGO KAB WONOSOBO.png') }}" class="max-h-full opacity-10">
@@ -186,9 +186,7 @@
                 Hubungi Kami
             </a>
         </div>
-    </div>
 </div>
-```
 
 <!-- Structure Section -->
 @if($profile && $profile->structure_image)
@@ -199,7 +197,7 @@
             <div class="h-1.5 w-32 bg-village-accent rounded-full mx-auto"></div>
         </div>
         <div class="bg-white p-8 rounded-3xl shadow-sm max-w-5xl mx-auto border text-center">
-            <img src="{{ asset('storage/' . $profile->structure_image) }}" alt="Struktur Organisasi" class="mx-auto block">
+            <img src="{{ asset('assets/' . $profile->structure_image) }}" alt="Struktur Organisasi" class="mx-auto block">
         </div>
     </div>
 </section>
