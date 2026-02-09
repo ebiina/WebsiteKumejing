@@ -33,9 +33,6 @@ class Post extends Model
 
     public function getImageUrlAttribute()
     {
-        if ($this->image && \Illuminate\Support\Facades\Storage::disk('public')->exists($this->image)) {
-            return '/storage/' . $this->image;
-        }
-        return '/assets/' . $this->image;
+        return '/storage/' . $this->image;
     }
 }

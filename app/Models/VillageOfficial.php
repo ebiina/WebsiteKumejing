@@ -15,9 +15,9 @@ class VillageOfficial extends Model
 
     public function getPhotoUrlAttribute()
     {
-        if ($this->photo && \Illuminate\Support\Facades\Storage::disk('public')->exists($this->photo)) {
-            return '/storage/' . $this->photo;
+        if ($this->photo && file_exists(public_path('assets/' . $this->photo))) {
+            return '/assets/' . $this->photo;
         }
-        return '/assets/' . $this->photo;
+        return '/storage/' . $this->photo;
     }
 }
