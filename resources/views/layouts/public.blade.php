@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('assets/LOGO KAB WONOSOBO.png') }}">
+    <link rel="icon" type="image/png" href="/assets/LOGO KAB WONOSOBO.png">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -54,7 +54,7 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center gap-3">
-                    <img src="{{ asset('assets/LOGO KAB WONOSOBO.png') }}" alt="Logo Wonosobo" class="w-12 h-auto">
+                    <img src="/assets/LOGO KAB WONOSOBO.png" alt="Logo Wonosobo" class="w-12 h-auto">
                     <div>
                         <div class="font-bold text-xl text-village-primary leading-tight">Desa Kumejing</div>
                         <div class="text-xs text-gray-500 tracking-widest">Wadaslintang, Wonosobo</div>
@@ -90,7 +90,7 @@
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div>
                 <div class="flex items-center gap-4 mb-6">
-                    <img src="{{ asset('assets/LOGO KAB WONOSOBO.png') }}" alt="Logo Wonosobo" class="w-12 h-auto">
+                    <img src="/assets/LOGO KAB WONOSOBO.png" alt="Logo Wonosobo" class="w-12 h-auto">
                     <h3 class="text-2xl font-bold">Desa Kumejing</h3>
                 </div>
                 <p class="text-gray-300 leading-relaxed mb-6">

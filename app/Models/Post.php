@@ -26,8 +26,16 @@ class Post extends Model
 
         static::creating(function ($post) {
             if (empty($post->slug)) {
-                $post->slug = Str::slug($post->title) . '-' . uniqid();
+                $post->slug = \Illuminate\Support\Str::slug($post->title) . '-' . uniqid();
             }
         });
+    }
+
+    public function getImageUrlAttribute()
+    {
+        if ($this->image && \Illuminate\Support\Facades\Storage::disk('public')->exists($this->image)) {
+            return '/storage/' . $this->image;
+        }
+        return '/assets/' . $this->image;
     }
 }

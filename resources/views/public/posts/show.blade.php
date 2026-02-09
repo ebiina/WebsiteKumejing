@@ -24,7 +24,7 @@
     <div class="bg-white rounded-3xl shadow-sm overflow-hidden border">
         @if($post->image)
         <div class="h-[500px] w-full bg-gray-100">
-            <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
+            <img src="{{ $post->image_url }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
         </div>
         @endif
         

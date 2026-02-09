@@ -5,7 +5,7 @@
     <section class="relative py-24 text-white bg-village-primary overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('assets/header-bg.jpg') }}" class="w-full h-full object-cover" alt="Header Background">
+            <img src="/assets/header-bg.jpg" class="w-full h-full object-cover" alt="Header Background">
             <div class="absolute inset-0 bg-village-primary/60"></div>
         </div>
 
