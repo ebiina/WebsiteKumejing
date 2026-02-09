@@ -1,6 +1,10 @@
 *
 !.gitignore
 !officials/
+!officials/**
 !posts/
+!posts/**
 !profile/
+!profile/**
 !galleries/
+!galleries/**
